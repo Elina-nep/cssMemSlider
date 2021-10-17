@@ -13,6 +13,7 @@ body {
     background-color: rgb(32, 32, 32);
     width: 100%;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -192,6 +193,13 @@ body {
         width: 10px;
         margin: 0px 0px;
         border: 1px solid rgb(86, 179, 255);
+    }
+    .wrapper label:hover #span1,
+    .wrapper label:hover #span2,
+    .wrapper label:hover #span3,
+    .wrapper label:hover #span4 {
+        background: #ddd;
+        border: 1px solid white;
     }
     .underwrite {
         width: var(--slider-width);
