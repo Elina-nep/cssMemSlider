@@ -1,5 +1,5 @@
 :root {
-    --slider-width: 70vw;
+    --slider-width: 50vw;
     --slides-number: 4;
 }
 
@@ -76,6 +76,7 @@ body {
     height: 30px;
     color: white;
     overflow: hidden;
+    align-items: center;
 }
 
 .write-conteiner {
@@ -90,7 +91,7 @@ body {
 }
 
 .wrapper .controls {
-    right: 10px;
+    right: 5px;
     margin-left: auto;
     position: relative;
     color: transparent;
@@ -153,4 +154,55 @@ body {
 #slide4:checked~.slider>.slides-container,
 #slide4:checked~.under-slide>.underwrite>.write-conteiner {
     transform: translateX(-75%);
+}
+
+@media screen and (max-width: 920px) {
+    .underwrite {
+        height: 20px;
+    }
+    .under-slide {
+        margin-top: 20px;
+    }
+    .wrapper label {
+        height: 20px;
+        position: relative;
+        width: 20px;
+    }
+    .wrapper label span {
+        height: 10px;
+        width: 10px;
+    }
+    .oneFun p {
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .under-slide {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    .wrapper .controls {
+        right: 0px;
+        margin: 10px auto;
+    }
+    .wrapper label span {
+        height: 10px;
+        width: 10px;
+        margin: 0px 0px;
+        border: 1px solid rgb(86, 179, 255);
+    }
+    .underwrite {
+        width: var(--slider-width);
+    }
+    .write-conteiner {
+        width: calc(var(--slider-width)*var(--slides-number));
+    }
+    .oneFun {
+        width: var(--slider-width);
+    }
+    .oneFun p {
+        font-size: .6em;
+    }
 }
